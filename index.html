@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132a63">
+  <title>Actividad de Socialización - Ética y Valores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#agency">Saltar al escenario</a>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <img class="brand-logo" src="logo_ucn.png" alt="Cibercolegio UCN">
+      <div class="topbar-title">
+        <span>Agencia Creativa de Sensibilización</span>
+        <strong>Ética y Valores · CLEI 4 · Período 3</strong>
+      </div>
+      <div class="topbar-actions">
+        <button class="sound-button" id="soundButton" type="button" aria-pressed="false" title="Activar sonidos">
+          <span aria-hidden="true">♪</span><span class="button-label">Sonido</span>
+        </button>
+        <button class="reset-button" id="resetButton" type="button">Reiniciar</button>
+      </div>
+    </header>
+
+    <main id="agency" class="agency" tabindex="-1">
+      <section class="hero-copy" aria-labelledby="mainTitle">
+        <p class="kicker">PROYECTO · ACTIVIDAD DE</p>
+        <h1 id="mainTitle">SOCIALIZACIÓN<br><span>ÉTICA Y VALORES</span><br><small>CLEI 4 – PERÍODO 3</small></h1>
+        <p class="subtitle">La dignidad humana, la belleza interior y el valor de las decisiones</p>
+        <p class="scene-hint"><span></span> Haz clic y explora los objetos iluminados de la agencia creativa</p>
+      </section>
+
+      <section class="creative-room" aria-label="Escenario interactivo con ocho zonas hotspot">
+        <div class="room-glow glow-one"></div>
+        <div class="room-glow glow-two"></div>
+        <div class="back-grid"></div>
+        <div class="route-guide" id="routeGuide" aria-live="polite">
+          <span>Agencia Creativa</span>
+          <span>Ruta paso a paso</span>
+          <strong>Inicia por Introducción</strong>
+        </div>
+
+        <button class="hotspot intro-board" data-hotspot="intro" type="button" aria-label="Abrir Introducción">
+          <span class="hotspot-number">00</span>
+          <span class="object-icon board-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="hotspot-name">Introducción</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot reading-book" data-hotspot="reading" type="button" aria-label="Abrir Lectura Reflexiva">
+          <span class="hotspot-number">01</span>
+          <span class="object-icon book-icon" aria-hidden="true"><i></i><i></i></span>
+          <span class="hotspot-name">Lectura<br>Reflexiva</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot comprehension-panel" data-hotspot="comprehension" type="button" aria-label="Abrir Comprensión e interpretación de la lectura">
+          <span class="hotspot-number">02</span>
+          <span class="object-icon notes-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="hotspot-name">Comprensión e<br>interpretación</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot dignity-wall" data-hotspot="dignity" type="button" aria-label="Abrir Dignidad humana y belleza interior">
+          <span class="hotspot-number">03</span>
+          <span class="object-icon heart-icon" aria-hidden="true">♡</span>
+          <span class="hotspot-name">Dignidad humana<br>y belleza interior</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot stereotypes-screen" data-hotspot="stereotypes" type="button" aria-label="Abrir Estereotipos sociales y valoración de las personas">
+          <span class="hotspot-number">04</span>
+          <span class="object-icon screen-icon" aria-hidden="true"><i></i></span>
+          <span class="hotspot-name">Estereotipos<br>sociales</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot decisions-lab" data-hotspot="decisions" type="button" aria-label="Abrir Libertad y responsabilidad en nuestras decisiones">
+          <span class="hotspot-number">05</span>
+          <span class="object-icon balance-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="hotspot-name">Libertad y<br>responsabilidad</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot campaign-desk" data-hotspot="campaign" type="button" aria-label="Abrir Campaña de sensibilización">
+          <span class="hotspot-number">06</span>
+          <span class="object-icon bulb-icon" aria-hidden="true"><i></i></span>
+          <span class="hotspot-name">Campaña de<br>sensibilización</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot delivery-desk" data-hotspot="delivery" type="button" aria-label="Abrir Entrega del trabajo">
+          <span class="hotspot-number">07</span>
+          <span class="object-icon send-icon" aria-hidden="true">↗</span>
+          <span class="hotspot-name">Entrega del<br>trabajo</span>
+          <span class="status-dot" aria-hidden="true"></span>
+        </button>
+
+        <div class="floor-line"></div>
+      </section>
+    </main>
+
+    <footer class="progress-dock" aria-label="Progreso general">
+      <div class="progress-summary">
+        <span>Progreso general</span>
+        <strong id="progressPercent">0%</strong>
+      </div>
+      <div class="progress-track" aria-hidden="true"><div id="progressFill"></div></div>
+      <ol class="progress-steps" id="progressSteps">
+        <li data-step="reading"><button type="button">1<span>Lectura</span></button></li>
+        <li data-step="comprehension"><button type="button">2<span>Comprensión</span></button></li>
+        <li data-step="dignity"><button type="button">3<span>Dignidad Humana</span></button></li>
+        <li data-step="stereotypes"><button type="button">4<span>Estereotipos</span></button></li>
+        <li data-step="decisions"><button type="button">5<span>Libertad y Responsabilidad</span></button></li>
+        <li data-step="campaign"><button type="button">6<span>Campaña</span></button></li>
+        <li data-step="delivery"><button type="button">7<span>Entrega</span></button></li>
+      </ol>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <div>
+          <span id="modalEyebrow" class="modal-eyebrow"></span>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar ventana">×</button>
+      </header>
+      <div class="modal-scroll" id="modalContent"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
